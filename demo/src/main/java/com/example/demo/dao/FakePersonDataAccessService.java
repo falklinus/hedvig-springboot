@@ -11,7 +11,11 @@ import java.util.UUID;
 @Repository("fakeDao")
 public class FakePersonDataAccessService implements PersonDao {
 
-    private static List<Person> DB = new ArrayList<>();
+    private static List<Person> DB = new ArrayList<>(List.of(
+            new Person(UUID.randomUUID(), "James Bond"),
+            new Person(UUID.randomUUID(), "Nelson Mandela"),
+            new Person(UUID.randomUUID(), "Ana Jones"),
+            new Person(UUID.randomUUID(), "Lillbabs")));
 
     @Override
     public int insertPerson(UUID id, Person person) {
