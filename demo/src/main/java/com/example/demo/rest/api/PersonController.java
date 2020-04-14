@@ -1,13 +1,11 @@
-package com.example.demo.api;
+package com.example.demo.rest.api;
 
-import com.example.demo.exception.PersonNotFoundException;
-import com.example.demo.model.Person;
-import com.example.demo.service.PersonService;
+import com.example.demo.rest.exception.PersonNotFoundException;
+import com.example.demo.rest.model.Person;
+import com.example.demo.rest.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 import java.util.List;
